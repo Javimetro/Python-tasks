@@ -7,7 +7,7 @@ luku3 = float(luku3_str)
 summa = luku1 + luku2 + luku3
 tulo = luku1 * luku2 * luku3
 keskiarvo = summa/3
-print(summa)
-print(tulo)
-print(keskiarvo)
+print('sinun valitsemisien luvujen summa on: ' + str(summa))
+print('sinun valitsemisien luvujen tulo on: ' + str(tulo))
+print('sinun valitsemisien luvujen keskiarvo on: ' + str(keskiarvo))
 
