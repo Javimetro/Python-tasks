@@ -16,7 +16,7 @@ luotitGrammoina = float(luotit) * LUOTI
 print(luotitGrammoina)
 
 Kokonaipaino = luotitGrammoina + naulatGrammoina + leiviskatGrammoina
-print(Kokonaipaino)
+
 kilot = float(math.floor(Kokonaipaino/1000))
 print('Kokonaispaino grammoina on '+ str(Kokonaipaino))
 print('Massa nykymittojen mukaan kilogrammoina: '+ str(kilot))
