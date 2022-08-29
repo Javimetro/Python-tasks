@@ -8,4 +8,3 @@ if pituus < 37:
 
 else:
     print('Kiva! saat pitää kuhan itsellesi!')
-
