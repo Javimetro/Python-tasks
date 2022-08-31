@@ -7,14 +7,14 @@ hb = int(input('Kirjoita hemoglobiiniarvosi (g/l): '))
 
 if sukupuoli=='Mies' or sukupuoli=='mies' and 134<=hb<195:
     print('Sinun hemoglobiiniarvo on normaali.')
-if sukupuoli=='Mies' or sukupuoli=='mies' and 134>hb:
+elif sukupuoli=='Mies' or sukupuoli=='mies' and 134>hb:
     print('Sinun hemoglobiiniarvo on matala.')
-if sukupuoli=='Mies' or sukupuoli=='mies' and 195<hb:
+elif sukupuoli=='Mies' or sukupuoli=='mies' and 195<hb:
     print('Sinun hemoglobiiniarvo on korkea.')
 
 if sukupuoli=='Nainen' or sukupuoli=='nainen' and 117<=hb<175:
     print('Sinun hemoglobiiniarvo on normaali.')
-if sukupuoli=='Nainen' or sukupuoli=='nainen' and 117>hb:
+elif sukupuoli=='Nainen' or sukupuoli=='nainen' and 117>hb:
     print('Sinun hemoglobiiniarvo on matalia.')
-if sukupuoli=='Nainen' or sukupuoli=='nainen' and 175<hb:
+elif sukupuoli=='Nainen' or sukupuoli=='nainen' and 175<hb:
     print('Sinun hemoglobiiniarvo on korkea.')
