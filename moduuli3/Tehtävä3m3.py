@@ -12,9 +12,9 @@ elif sukupuoli=='Mies' or sukupuoli=='mies' and 134>hb:
 elif sukupuoli=='Mies' or sukupuoli=='mies' and 195<hb:
     print('Sinun hemoglobiiniarvo on korkea.')
 
-if sukupuoli=='Nainen' or sukupuoli=='nainen' and 117<=hb<175:
+elif sukupuoli=='Nainen' or sukupuoli=='nainen' and 117<=hb<175:
     print('Sinun hemoglobiiniarvo on normaali.')
 elif sukupuoli=='Nainen' or sukupuoli=='nainen' and 117>hb:
-    print('Sinun hemoglobiiniarvo on matalia.')
+    print('Sinun hemoglobiiniarvo on matala.')
 elif sukupuoli=='Nainen' or sukupuoli=='nainen' and 175<hb:
     print('Sinun hemoglobiiniarvo on korkea.')
