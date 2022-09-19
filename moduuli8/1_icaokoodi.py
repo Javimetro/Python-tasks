@@ -19,10 +19,10 @@ yhteys = mysql.connector.connect(
          autocommit=True
          )
 
-kentta = haelentokentta('007') #input puuttuu
-print('kentta: ',kentta)
-if not kentta is not None:
-    print(f'Nimi: {kentta[0]}, kunta: {kentta[1]}')
-
-    #3 tehtävässä lasketaan etäisyys, tarvitaan kordinaatit (longitude ja latitude_deg)
-    #geopy importetaan vain "distance" eli from geopy import distance.
+kentta = '___'
+while True:
+    kentta = haelentokentta(input('Anna lentokennan ICAO koodin: '))
+    if kentta is not None:
+        print(kentta)
+    else:
+        print('Ei löydetty, yritä uudelleen.')

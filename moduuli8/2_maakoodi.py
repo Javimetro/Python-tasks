@@ -10,8 +10,6 @@ yhteys = mysql.connector.connect(
          autocommit=True
          )
 
-maakoodi = 'FI' #kysytään käyttäjältä (input)
-
 def haeTyypit():
     sql = 'SELECT DISTINCT type FROM airport;'
     kursori = yhteys.cursor()
@@ -28,6 +26,7 @@ def haeKenttienLkm(maakoodi, tyyppi):
     tulos = kursori.fetchone()
     return tulos
 
+maakoodi = input('Kirjoita lentokennan maakoodin: ')
 
 tyypit = haeTyypit()
 print('tyypit: ', tyypit)
