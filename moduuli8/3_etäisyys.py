@@ -1,6 +1,6 @@
 
 import mysql.connector
-import geopy
+from geopy.distance import geodesic
 
 yhteys = mysql.connector.connect(
          host='127.0.0.1',
@@ -11,19 +11,20 @@ yhteys = mysql.connector.connect(
          autocommit=True
          )
 
-from geopy import distance
+
 
 def haelongitudeicaolla(icao):
     tuple = (icao,)
-    sql = '''SELECT longitude_deg, latitude_deg FROM airport 
+    sql = '''SELECT latitude_deg, longitude_deg FROM airport 
     WHERE ident = %s'''
     kursori = yhteys.cursor()
     kursori.execute(sql, tuple)
     tulos = kursori.fetchone()
-    return tulos;
+    print(tulos)
+    return tulos
 
 
 icao1 = input('Anna ensimmäisen lentoaseman ICAO koodin: ')
 icao2 = input('Anna toisen lentoaseman ICAO koodin: ')
 
-print(f' Etäisyys lentokenttien välillä on: {round(distance.distance(haelongitudeicaolla(icao1), haelongitudeicaolla(icao2)).km,3)} Km.')
+print(f' Etäisyys lentokenttien välillä on: {round(geodesic(haelongitudeicaolla(icao1), haelongitudeicaolla(icao2)).km,3)} Km.')
