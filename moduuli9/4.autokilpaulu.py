@@ -32,12 +32,10 @@ for i in range(10):
     auto = Auto(f'ABC-{i+1}',i+1)
     list.append(auto)
 
-
-while True:
-    for self in list:
-        if self.kuljettumatka <= 10000:
-            self.kiihdyta(random.randint(-10, 15))
-            self.kulje(1)
-            if self.kuljettumatka >= 10000:
-                print(f'\nNo: {self.numero}\nREKISTERITUNNUS: {self.rekisteritunnus}\nHUIPPUNOPEUS: {self.huippunopeus} Km/h\nTÄMÄN HETKINEN NOPEUS: {self.nopeus} Km/h\nKULJETTU MATKA: {self.kuljettumatka} Km')
-
+for self in list:
+    self.kiihdyta(random.randint(-10, 15))
+    self.kulje(1)
+    list.append(self)
+    if self.kuljettumatka >= 10000:
+        print(f'\nNo: {self.numero} on voittaja! \nREKISTERITUNNUS: {self.rekisteritunnus}\nHUIPPUNOPEUS: {self.huippunopeus} Km/h\nTÄMÄN HETKINEN NOPEUS: {self.nopeus} Km/h\nKULJETTU MATKA: {self.kuljettumatka} Km')
+        break
