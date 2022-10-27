@@ -38,4 +38,6 @@ while True:
         if self.kuljettumatka <= 10000:
             self.kiihdyta(random.randint(-10, 15))
             self.kulje(1)
-            print(f'\nNo: {self.numero}\nREKISTERITUNNUS: {self.rekisteritunnus}\nHUIPPUNOPEUS: {self.huippunopeus} Km/h\nTÄMÄN HETKINEN NOPEUS: {self.nopeus} Km/h\nKULJETTU MATKA: {self.kuljettumatka} Km')
+            if self.kuljettumatka >= 10000:
+                print(f'\nNo: {self.numero}\nREKISTERITUNNUS: {self.rekisteritunnus}\nHUIPPUNOPEUS: {self.huippunopeus} Km/h\nTÄMÄN HETKINEN NOPEUS: {self.nopeus} Km/h\nKULJETTU MATKA: {self.kuljettumatka} Km')
+
